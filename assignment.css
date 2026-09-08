@@ -1,0 +1,226 @@
+html{
+    min-height: 100%; 
+    cursor: url("pics/oie_1203123ScW75cIR.png") 16 16, auto;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+
+
+}
+.canvasclass{
+    background-color: green;
+    width: 20%;
+    height: 80%;
+    margin: 30%;
+
+}
+
+.header{
+    position: fixed;
+    background-color: #ddac27; /* #f1ab25 is a nice orange and it looks like flab*/
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    border: solid;
+    z-index: 1;
+}
+#text-logo{
+    display: block;
+    width: auto;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px; /* setting absolute pixel value here as it looks better when kept consistent but will need to adapt to screen size */
+    padding-bottom: 10px;
+
+}
+#sun-and-moon-image{
+    display: block;
+    height: 25px;
+    width: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px; /* this should be num of clicks / 28 (num of songs)*/
+    z-index: 1;
+    position: relative;
+    
+}
+#sun-and-moon{
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(20, 20, 100);
+    margin-top: 80px;
+}
+
+#background-top{
+    height: calc(50% - 40px);
+    width: 30%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0%;
+    
+}
+#background-bottom{
+    bottom: 0px;
+    height: calc(50% - 40px);
+    width: 30%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0%;
+}
+
+#day{
+    height: calc(50% - 40px);
+    width: 30%;
+    position: fixed;
+    z-index: -1;
+    opacity: 100%;
+    
+}
+#night{
+    bottom: 0px;
+    height: calc(50% - 40px);
+    width: 30%;
+    position: fixed;
+    z-index: -1;
+    opacity: 100%;
+    transform: rotate(180deg);
+
+}
+
+
+
+.main-content{
+    position: fixed;
+    background-color: yellowgreen;
+    height: 100%;
+    width: 65%;
+    padding: 0%;
+    left: 25%;
+    margin-top: 80px;
+    background-image: url("pics/ai/rp2.png");
+    border: solid;
+    z-index: 1;
+    box-sizing: border-box;
+    border-top: 0px;
+
+}
+
+#mcatis{
+    min-width: 200px;
+    min-height: 200px;
+    
+    height: 100%;
+    width: 100%; 
+    grid-area: mcatis;
+}
+
+#descriptionofmcatis{
+    grid-area: descriptionofmcatis;
+    color: #ddac27;
+    background-color: bisque;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-wrap: pretty;
+    font-family: "Salsa";
+    font-size: 4vw;
+}
+#player{
+    grid-area: player;
+}
+
+
+.grid{
+    margin: 10px;
+    display: grid;
+    grid-template-areas:
+    "mcatis"
+    "descriptionofmcatis"
+    "player";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.theatrics{
+    position: fixed;
+    width: 10%;
+    height: 90%;
+    background-color: violet;
+    margin-top: 80px;
+    right: 0px;
+    background-image: url("pics/site-background.jpg");
+    
+
+}
+#button{
+    width: 100%;
+    height: 70px;
+    opacity: 100%;
+    padding: 0px;
+    border-radius: 0px;
+}
+#ribbon{
+    width: 100%;
+    height: 70%;
+    opacity: 100%;
+}
+#end{
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 360px) {
+
+}
+
+@media (min-width: 540px) {
+    /*large mobile sized device*/
+    .grid{ /*proof conceptually this works - can switch content depending on certain things*/
+        margin: 10px;
+        display: grid;
+        grid-template-areas:
+        
+        "descriptionofmcatis"
+        "mcatis";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    
+    }
+    
+}
+
+@media (min-width: 720px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+
+
+/*#progress{
+    position: fixed;
+    display: block;
+    width: 50px;
+    height: 10px;
+    margin-left: 100px;
+    margin-right: auto;
+    container-type: inline-size;
+    z-index: 6;
+    background-color: whitesmoke;
+}*/
+
+@container (height: 20px) {
+    #sun-and-moon-image{
+      width: 500px;
+    }
+
+  }
